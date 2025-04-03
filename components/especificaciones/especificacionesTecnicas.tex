@@ -1,0 +1,42 @@
+\section{Especificaciones Técnicas }
+
+  En esta sección se detallan las especificaciones técnicas del proyecto, incluyendo los materiales y componentes utilizados, así como la descripción de los algoritmos que se implementaron en el sistema para la obtención de los insumos geoespaciales necesarios para el cálculo de la correlación de los datos.
+
+  \subsection{Descripción del proyecto}
+
+    El proyecto consiste en la implementación de un aplicativo desarrollado y deplegado en la plataforma Google Earth Engine, que permita monitorear los efectos de la variación en la temperatura superficial del mar en el Índice de Vegetación de Diferencia Normalizada (NDVI) así como con información del índice costero el niño (ICEN) y su correlación. Para ello se utilizan imagenes satelitales Sentinel2 de la misión Copernicus de la agencia espacial europea (ESA), las cuales son procesadas y analizadas en la plataforma Google Earth Engine.
+
+  \subsection{Términos y definiciones}
+
+    \begin{itemize}
+      \item \textbf{Índice de Vegetación de Diferencia Normalizada (NDVI):} Es un índice que se utiliza para determinar la cantidad de vegetación que hay en un área determinada. Se calcula a partir de la diferencia entre el valor del infrarrojo cercano y el rojo, dividido por la suma de estos dos valores.
+      \item \textbf{Índice Costero el Niño (ICEN):} Es un índice que se utiliza para determinar la presencia de eventos de El Niño en la región costera del Perú. Se calcula a partir de la temperatura superficial del mar y la presencia de anomalías térmicas en la región.
+      \item \textbf{Google Earth Engine:} Es una plataforma desarrollada por Google que permite el procesamiento y análisis de información geoespacial a gran escala y de uso libre.
+    \end{itemize}
+
+  \subsection{Materiales y componentes}
+
+    \begin{itemize}
+      \item \textbf{Google Earth Engine:} Plataforma de procesamiento y análisis de imágenes satelitales.
+      \item \textbf{Sentinel2:} Imágenes satelitales de la misión Copernicus de la agencia espacial europea (ESA).
+      \item \textbf{Javascript:} Lenguaje de programación utilizado para el desarrollo del aplicativo. 
+    \end{itemize}
+
+  \subsection{Algoritmos implementados}
+  
+    \begin{enumerate}[label=\thesubsection.\arabic*, leftmargin=1.5cm]
+      \item \textbf{Selector de área de interés}
+      
+      La primera parte del aplicativo consiste en seleccionar el área de interés en la que se desea realizar el análisis. Para ello se le brinda al usuario un pánel principal donde escoger en tres fases la región de interés. Mediante la selección se un departamento y provincia este dispone de una lista de distritos que son pretenecientes a dicha provincia. Finalmente se selecciona un distrito y se muestra en el mapa la región seleccionada.
+
+      La información vectorial de los departamentos, provincias y distritos se obtiene de la plataforma de geodatos del Instituto Nacional de Estadística e Informática (INEI) del Perú. Este se encuentra actualizado al año 2023 y se encuentra disponible en la plataforma oficial mediante el siguiente link \href{https://ide.inei.gob.pe/#capas/}{https://ide.inei.gob.pe/\#capas/}.
+
+      \item \textbf{Cálculo del área de cobertura agrícola permanente.}
+      
+      Para calcular el área de cobertura agrícola permanente se utilizan imágenes provenientes del satelite Sentinel2 de la misión Copernicus de la agencia espacial europea (ESA). Estas imágenes son procesadas y analizadas en la plataforma Google Earth Engine. Para evitar problemas de nubes y sombras se aplica un filtro del 10\% de nubes, lo que permite obtener imágenes óptimas. Posteriormente tomando como referencia el área escogida mediante el la primera fase, se restringe el procesamiento a dicha área lo que permite mejorar los tiempos de cómputo.
+
+      De entre las imagenes se toma una muestra por mes, lo que equivale a 12 imagenes obtenidas por año, éste último parámetro puede cambiar para mejorar la presición de la segmentación agrícola, en este punto se procesan solo los píxeles que mantienen un valor de NDVI mayor o igual a $0.55$, finalmente este resultado pasa por un proceso de conversión a vectores poligonales, lo que permite obtener así, regiones que se considere cobertura agrícola permanente.
+
+      \item \textbf{Integración con la información del ICEN.}
+
+    \end{enumerate}

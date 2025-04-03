@@ -1,0 +1,114 @@
+\documentclass{article}
+
+%===============================
+%
+%          📦 Paquetes
+%
+%===============================
+
+% === Configuración del documento y tipografía ===
+\usepackage[a4paper, top=3cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+% === Gráficos y representaciones visuales ===
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+% === Estilo y personalización ===
+\usepackage{titling}
+\usepackage{titlesec}
+\usepackage{tocloft} 
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{caption}
+
+% === Matemáticas y símbolos ===
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+
+% === Estructura y disposición del contenido ===
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+
+% === Hipervínculos y referencias ===
+\usepackage[nottoc]{tocbibind}
+\usepackage{hyperref}
+
+%===============================
+%
+%          ⬆️⬇️ Cabeceras
+%
+%===============================
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[width=2cm]{assets/logo.png}}
+\fancyhead[R]{\textit{Universidad Tecnológica del Perú}}
+\fancyfoot[R]{\thepage}
+\setlength{\headheight}{22.9188pt}
+\addtolength{\topmargin}{-5.64944pt}
+
+%======================================
+%
+%          📑 Espaciado de Párrafos
+%
+%======================================
+
+\setlength{\parskip}{1.5em}
+\setlength{\parindent}{0pt}
+
+%======================================
+%
+%          📕 Estrucura del título
+%
+%======================================
+
+\title{
+  \pagenumbering{gobble}
+  \includegraphics[width=5cm]{./assets/logo-utp.png} \\
+  \vspace{1cm}
+  \textbf{Universidad Tecnológica del Perú} \\
+  \vspace{2cm}
+  \textbf{INFORME TÉCNICO} \\
+  \textbf{APLICATIVO DE MONITOREO DE LOS EFECTOS DE LA VARIACIÓN EN LA TEMPERATURA SUPERFICIAL DEL MAR EN EL NDVI Y SU CORRELACIÓN.} \\
+  \vspace{1cm}
+}
+\author{
+  \begin{tabular}{ll}
+    \textbf{Huatay Salcedo, Luis} & \texttt{u24218809@utp.edu.pe} \\
+  \end{tabular} \\\\
+}
+
+\begin{document}
+\maketitle
+
+%======================================
+%
+%          📚 Inicio del documento
+%
+%======================================
+
+\newpage
+
+% Inicio de la numeración de páginas (desde aquí)
+\pagenumbering{arabic}
+\setcounter{page}{2}  
+
+\tableofcontents
+\thispagestyle{fancy}
+
+% Introducción
+\include{components/introduccion/introduccion}
+
+% Capítulo 1
+\include{components/especificaciones/especificacionesTecnicas}
+
+\end{document}
