@@ -12,8 +12,14 @@
       \item \textbf{Índice de Vegetación de Diferencia Normalizada (NDVI):} Es un índice que se utiliza para determinar la cantidad de vegetación que hay en un área determinada. Se calcula a partir de la diferencia entre el valor del infrarrojo cercano y el rojo, dividido por la suma de estos dos valores.
       \item \textbf{Índice Costero el Niño (ICEN):} Es un índice que se utiliza para determinar la presencia de eventos de El Niño en la región costera del Perú. Se calcula a partir de la temperatura superficial del mar y la presencia de anomalías térmicas en la región.
       \item \textbf{Google Earth Engine:} Es una plataforma desarrollada por Google que permite el procesamiento y análisis de información geoespacial a gran escala y de uso libre.
+      \item \textbf{Sentinel2:} Es una misión de la Agencia Espacial Europea (ESA) que proporciona imágenes satelitales de alta resolución y de uso libre. Esta misión está compuesta por dos satélites, Sentinel-2A y Sentinel-2B, que orbitan la Tierra cada 5 días.
+      \item \textbf{NOAA - MODIS:} Es un sensor de imágenes satelitales que proporciona información sobre la temperatura superficial del mar y otros parámetros oceánicos. Este sensor es operado por la Administración Nacional Oceánica y Atmosférica (NOAA) de los Estados Unidos.
+      \item \textbf{Asset:} Es un recurso geoespacial que se almacena en la plataforma Google Earth Engine. Los assets pueden ser imágenes, capas vectoriales, tablas, entre otros.
+      \item \textbf{Script:} Es un conjunto de instrucciones que se ejecutan en la plataforma Google Earth Engine para realizar un procesamiento específico. Los scripts pueden ser escritos en JavaScript o Python.
+      \item \textbf{GitHub Actions:} Es una herramienta de integración continua y entrega continua (CI/CD) que permite automatizar tareas en GitHub. Esta herramienta permite ejecutar scripts de Python en un intervalo de tiempo determinado, lo que permite mantener la información actualizada.
+      \item \textbf{TSM:} Es un acrónimo de temperatura superficial del mar. Este parámetro se utiliza para determinar la presencia de anomalías térmicas en la región costera del Perú.
+      \item \textbf{Correlación:} Es una medida estadística que indica la relación entre dos variables. En este caso, se utiliza para determinar la relación entre el NDVI y la TSM. La correlación se calcula utilizando el algoritmo de Pearson, que permite obtener un coeficiente de correlación entre -1 y 1. 
     \end{itemize}
-
   \subsection{Materiales y componentes}
 
     \begin{itemize}
@@ -38,5 +44,33 @@
       De entre las imagenes se toma una muestra por mes, lo que equivale a 12 imagenes obtenidas por año, éste último parámetro puede cambiar para mejorar la presición de la segmentación agrícola, en este punto se procesan solo los píxeles que mantienen un valor de NDVI mayor o igual a $0.55$, finalmente este resultado pasa por un proceso de conversión a vectores poligonales, lo que permite obtener así, regiones que se considere cobertura agrícola permanente.
 
       \item \textbf{Integración con la información del ICEN.}
+      
+      La información del índice costero el niño (ICEN) se obtiene a partir del repositorio de datos de la Subdirección de Ciencias de la Atmósferea e Hidrósfera del Instituto Geofísico del Perú, disponible en la plataforma oficial mediante el siguiente link: \href{http://met.igp.gob.pe/datos/ICEN.txt}{http://met.igp.gob.pe/datos/ICEN.txt}.
+      
+      Esta información se encuentra disponible en formato de texto plano y contiene datos de anomalías térmicas en la temperatura superficial del mar (TSM).
+
+      Para hacer uso de los datos dentro del algoritmo de procesamiento en la aplicación, se desarrolló un proceso basado en la solicitud de datos mediante un script en Python, que realiza la descarga y almacenamiento en un archivo CSV, el cuál se guarda en un repositorio de GitHub. Este archivo CSV es posteriormente inyectado a la plataforma de Google Earth Engine como un asset nuevo. Todo este proceos es automatizado gracias al servicio de GitHub Actions, el cuál permite ejecutar scripts de Python en un intervalo de tiempo determinado. En este caso se ejecuta cada 24 horas, lo que permite mantener la información actualizada.
+
+      \newpage
+
+      \item \textbf{Cálculo de anomalía térmica en la TSM - MODIS.}
+      
+      A fin de poder utilizar información actualizada, se utiliza el sensor MODIS de la Administración Nacional Oceánica y Atmosférica (NOAA) de los Estados Unidos. Este sensor proporciona información sobre la temperatura superficial del mar y otros parámetros oceánicos. Este asset se utiliza mediante los servicios de Google Earth Engine, el cuál permite acceder a información de diferentes sensores y misiones espaciales. En este caso se utiliza el sensor MODIS Aqua, que proporciona información diaria sobre la temperatura superficial del mar.
+
+      Para el cálculo de la anomalía térmica en la TSM, se utiliza un algoritmo que calcula la diferencia entre la temperatura superficial del mar y la media de los últimos 30 años. Con esto se obtiene una lista del registro histórico de la temperatura superficial del mar de los últimos 15 años, información que servirá para entender mejor el comportamiento histórico del NDVI frente a dichas anomalías.
+
+      \item \textbf{Registro histórico del NDVI vs TSM.}
+      
+      Al seleccionar un mes en específico, se calcula el registro histórico de los niveles NDVI en las zonas devueltas por el cálculo de la cobertura agrícola permanente que se toman a modo de área de muestra, se realiza el cálculo de la media mensual del año en curso y de 14 años anteriores, posteriormente se comparan con el resgistro de la TSM de dos meses antes, tiempo que se considera promedio sobre el cual se perciben los efectos de la anomalía en la TSM. Finalmente cada registro es devuelto en una lista que se toma como entrada de datos para el procesado de un gráfico comparativo.
+
+      Esta información ayuda a poder entender el comportamiento del NDVI en dichas zonas a lo largo de los años, lo que permite identificar patrones y tendencias en el comportamiento del NDVI frente a las anomalías térmicas en la TSM. Esta información es útil para la toma de decisiones en la gestión de riesgos y la planificación agrícola.
+      
+      \item \textbf{Cálculo de la correlación entre el NDVI y la TSM.}
+      
+      La correlación entre el NDVI y la TSM se calcula de manera particular para cada caso del distrito escogido y es realizado tomando los registros de eventos extremos, evento de mediana y baja intensidad, así como eventos normales. Utilizando el algoritmo de Pearson, se obtiene el coeficiente de correlación entre el NDVI y la TSM. Este coeficiente varía entre -1 y 1, donde -1 indica una correlación negativa perfecta, 0 indica una ausencia de correlación y 1 indica una correlación positiva perfecta. 
+
+      Este análisis permite determinar la vulnerabilidad de cada distrito seleccionado frente a eventos extremos así como el mapeo de estos, información que puede ser utilizada para la toma de decisiones en la gestión de riesgos y la planificación agrícola.
+      
+      
 
     \end{enumerate}

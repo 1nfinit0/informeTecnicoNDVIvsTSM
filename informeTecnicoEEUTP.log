@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.23)  3 APR 2025 16:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.23)  30 APR 2025 16:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -703,7 +703,7 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 ) (./informeTecnicoEEUTP.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
- (./components/introduccion/introduccion.aux) (./components/especificaciones/especificacionesTecnicas.aux))
+ (./components/introduccion/introduccion.aux) (./components/especificaciones/especificacionesTecnicas.aux) (./components/comentarios/comentarios.aux))
 \openout1 = `informeTecnicoEEUTP.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
@@ -791,7 +791,7 @@ Package hyperref Info: Link coloring OFF on input line 90.
 \@outlinefile=\write4
 \openout4 = `informeTecnicoEEUTP.out'.
 
-<./assets/logo-utp.png, id=31, 3864.4375pt x 928.46875pt>
+<./assets/logo-utp.png, id=43, 3864.4375pt x 928.46875pt>
 File: ./assets/logo-utp.png Graphic file (type png)
 <use ./assets/logo-utp.png>
 Package pdftex.def Info: ./assets/logo-utp.png  used on input line 92.
@@ -816,7 +816,7 @@ LaTeX Info: Redefining \% on input line 1.
 
 
 
-<assets/logo.png, id=48, 1288.815pt x 437.635pt>
+<assets/logo.png, id=63, 1288.815pt x 437.635pt>
 File: assets/logo.png Graphic file (type png)
 <use assets/logo.png>
 Package pdftex.def Info: assets/logo.png  used on input line 109.
@@ -839,42 +839,61 @@ Package pdftex.def Info: assets/logo.png  used on input line 109.
 
 File: assets/logo.png Graphic file (type png)
 <use assets/logo.png>
-Package pdftex.def Info: assets/logo.png  used on input line 36.
+Package pdftex.def Info: assets/logo.png  used on input line 27.
 (pdftex.def)             Requested size: 56.9055pt x 19.31876pt.
 [4
 
 
 
-])
+]
+
+File: assets/logo.png Graphic file (type png)
+<use assets/logo.png>
+Package pdftex.def Info: assets/logo.png  used on input line 54.
+(pdftex.def)             Requested size: 56.9055pt x 19.31876pt.
+[5])
 
 File: assets/logo.png Graphic file (type png)
 <use assets/logo.png>
 Package pdftex.def Info: assets/logo.png  used on input line 112.
 (pdftex.def)             Requested size: 56.9055pt x 19.31876pt.
-[5] (./informeTecnicoEEUTP.aux
+[6]
+\openout2 = `components/comentarios/comentarios.aux'.
+
+ (./components/comentarios/comentarios.tex)
+
+File: assets/logo.png Graphic file (type png)
+<use assets/logo.png>
+Package pdftex.def Info: assets/logo.png  used on input line 115.
+(pdftex.def)             Requested size: 56.9055pt x 19.31876pt.
+[7
+
+
+
+] (./informeTecnicoEEUTP.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
- (./components/introduccion/introduccion.aux) (./components/especificaciones/especificacionesTecnicas.aux))
+ (./components/introduccion/introduccion.aux) (./components/especificaciones/especificacionesTecnicas.aux) (./components/comentarios/comentarios.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `informeTecnicoEEUTP.out' has not changed.
-(rerunfilecheck)             Checksum: 3FE8D87948678ED11B4F80583D83B257;1018.
+(rerunfilecheck)             Checksum: 438B3E5063A6D86E5363AFCF5F164511;1531.
  ) 
 Here is how much of TeX's memory you used:
- 35258 strings out of 475109
- 798702 string characters out of 5765325
- 1291043 words of memory out of 5000000
- 57696 multiletter control sequences out of 15000+600000
+ 35295 strings out of 475109
+ 800034 string characters out of 5765325
+ 1293491 words of memory out of 5000000
+ 57717 multiletter control sequences out of 15000+600000
  567522 words of font info for 70 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 102i,16n,107p,776b,616s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,15n,107p,783b,615s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on informeTecnicoEEUTP.pdf (5 pages, 153711 bytes).
+Output written on informeTecnicoEEUTP.pdf (7 pages, 164243 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 141 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 95 words of extra memory for PDF output out of 10000 (max. 10000000)
 

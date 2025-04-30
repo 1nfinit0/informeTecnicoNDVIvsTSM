@@ -312,6 +312,9 @@ INPUT components/introduccion/introduccion.aux
 INPUT ./components/especificaciones/especificacionesTecnicas.aux
 INPUT ./components/especificaciones/especificacionesTecnicas.aux
 INPUT components/especificaciones/especificacionesTecnicas.aux
+INPUT ./components/comentarios/comentarios.aux
+INPUT ./components/comentarios/comentarios.aux
+INPUT components/comentarios/comentarios.aux
 OUTPUT informeTecnicoEEUTP.aux
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -401,6 +404,14 @@ INPUT ./components/especificaciones/especificacionesTecnicas.tex
 INPUT components/especificaciones/especificacionesTecnicas.tex
 INPUT ./assets/logo.png
 INPUT ./assets/logo.png
+INPUT ./assets/logo.png
+INPUT ./components/comentarios/comentarios.tex
+INPUT ./components/comentarios/comentarios.tex
+OUTPUT components/comentarios/comentarios.aux
+INPUT ./components/comentarios/comentarios.tex
+INPUT ./components/comentarios/comentarios.tex
+INPUT components/comentarios/comentarios.tex
+INPUT ./assets/logo.png
 INPUT informeTecnicoEEUTP.aux
 INPUT ./components/introduccion/introduccion.aux
 INPUT ./components/introduccion/introduccion.aux
@@ -408,6 +419,9 @@ INPUT components/introduccion/introduccion.aux
 INPUT ./components/especificaciones/especificacionesTecnicas.aux
 INPUT ./components/especificaciones/especificacionesTecnicas.aux
 INPUT components/especificaciones/especificacionesTecnicas.aux
+INPUT ./components/comentarios/comentarios.aux
+INPUT ./components/comentarios/comentarios.aux
+INPUT components/comentarios/comentarios.aux
 INPUT ./informeTecnicoEEUTP.out
 INPUT ./informeTecnicoEEUTP.out
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb

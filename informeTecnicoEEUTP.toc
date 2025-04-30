@@ -3,5 +3,8 @@
 \contentsline {section}{\numberline {2}Especificaciones Técnicas }{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Descripción del proyecto}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Términos y definiciones}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Materiales y componentes}{4}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Algoritmos implementados}{4}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.3}Materiales y componentes}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Algoritmos implementados}{5}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Comentarios}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Cobertura agrícola permanente}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Registro histórico del NDVI}{7}{subsection.3.2}%
