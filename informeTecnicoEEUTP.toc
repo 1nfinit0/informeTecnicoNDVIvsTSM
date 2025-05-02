@@ -5,6 +5,16 @@
 \contentsline {subsection}{\numberline {2.2}Términos y definiciones}{4}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Materiales y componentes}{5}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Algoritmos implementados}{5}{subsection.2.4}%
-\contentsline {section}{\numberline {3}Comentarios}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Cobertura agrícola permanente}{7}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Registro histórico del NDVI}{7}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {2.4.1}\textbf {Selector de área de interés}}{5}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}\textbf {Cálculo del área de cobertura agrícola permanente.}}{5}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}\textbf {Integración con la información del ICEN.}}{5}{subsubsection.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.4}\textbf {Cálculo de anomalía térmica en la TSM - MODIS.}}{6}{subsubsection.2.4.4}%
+\contentsline {subsubsection}{\numberline {2.4.5}\textbf {Registro histórico del NDVI vs TSM.}}{6}{subsubsection.2.4.5}%
+\contentsline {subsubsection}{\numberline {2.4.6}\textbf {Cálculo de la correlación entre el NDVI y la TSM.}}{6}{subsubsection.2.4.6}%
+\contentsline {section}{\numberline {3}Manual de usuario aplicativo GEE}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Descripción de la interfaz}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Uso del aplicativo}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Interpretación de gráficos}{8}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Comentarios}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Cobertura agrícola permanente}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Registro histórico del NDVI}{10}{subsection.4.2}%
